@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.row,
+.container,
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+// global styles for pagination
+.pagination {
+  background-color: #f5f8fb;
+  border-radius: 2px;
+
+  .page-link {
+    color: #9faab9;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .page-item.active .page-link {
+    color: #6d8cb6;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .page-item:last-child {
+    background-color: white;
+  }
+
+  .page-item.disabled {
+    background-color: #9faab9;
+
+    .page-link {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}

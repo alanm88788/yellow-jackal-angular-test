@@ -1,0 +1,71 @@
+.sidebar {
+  width: 150px;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(135deg, #2d496f 1.05%, #016653 97.37%);
+
+  img {
+    padding: 20px 25px;
+  }
+
+  ::ng-deep {
+		#summary .card-body {
+			display: none;
+		}
+    .card {
+      border: 0;
+			background-color: transparent;
+			border-radius: 0;
+
+			&.active {
+				background: #6d8cb680;
+			}
+
+      .card-header {
+        padding: 18px 25px;
+        border-radius: 0;
+        background-color: transparent;
+				border: none;
+
+        button {
+          padding: 0;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 19px;
+          letter-spacing: 1px;
+          text-align: left;
+          color: white;
+					text-decoration: none;
+					opacity: .6;
+        }
+
+      }
+			.card-body {
+				padding-left: 25px;
+				padding-top: 0;
+
+				ul {
+					margin: 0;
+					padding: 0;
+					
+					li {
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: 19px;
+						letter-spacing: 0px;
+						text-align: left;
+						list-style: none;
+						color: white;
+						margin-bottom: 8px;
+						cursor: pointer;
+					}
+				}
+
+			}
+
+    }
+  }
+}

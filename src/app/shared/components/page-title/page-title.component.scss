@@ -1,0 +1,19 @@
+.title {
+  display: flex;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 37px;
+	letter-spacing: -1px;
+	color: #6D8CB6;
+	font-weight: 300;
+
+	h2 {
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+
+	span {
+		text-transform: uppercase;
+		margin-left: 10px;
+	}
+}

@@ -1,0 +1,49 @@
+<div class="pageWrapper row h-100 d-flex flex-column">
+  <div class="d-flex justify-content-between ps-4 py-2 w-100">
+    <app-page-title></app-page-title>
+    <div class="d-flex">
+      <app-filter class="me-1"></app-filter>
+      <app-date-picker class="me-4"></app-date-picker>
+      <app-logged-user></app-logged-user>
+    </div>
+  </div>
+  <div class="container flex-fill">
+    <div class="row table-wrapper mt-3">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Ticket ID</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Caller Name</th>
+            <th scope="col">Rep Name</th>
+            <th scope="col">Date Opened</th>
+            <th scope="col">Date Resolved</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of tickets">
+            <th>{{ ticket.ticketId }}</th>
+            <td>
+              {{ ticket.customerId }}
+            </td>
+            <td>{{ ticket.callerName }}</td>
+            <td>{{ ticket.repName }}</td>
+            <td>{{ ticket.dateOpened }}</td>
+            <td>{{ ticket.dateResolved }}</td>
+            <td>{{ ticket.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-center p-3">
+      <ngb-pagination
+        [collectionSize]="collectionSize"
+        [(page)]="page"
+        [pageSize]="pageSize"
+        (pageChange)="refreshTickets()"
+      >
+      </ngb-pagination>
+    </div>
+  </div>
+</div>

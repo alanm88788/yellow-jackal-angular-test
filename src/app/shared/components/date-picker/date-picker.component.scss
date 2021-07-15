@@ -1,0 +1,25 @@
+.calendar {
+  display: flex;
+  border: 1px solid #b6c0cd;
+  align-items: center;
+  height: 40px;
+  border-radius: 2px;
+	position: relative;
+	width: 260px;
+
+  .cal-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #b6c0cd;
+    width: 40px;
+    height: 40px;
+		cursor: pointer;
+		padding: 12px;
+  }
+
+  input {
+    border: 0;
+		color: #777E87;
+  }
+}

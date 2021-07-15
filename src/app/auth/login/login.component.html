@@ -1,0 +1,48 @@
+<div class="loginWrapper">
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" class="d-flex">
+    <img src="../../../assets//images/logo.svg" alt="logo" />
+    <div
+      [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors }"
+    >
+      <label>Username</label>
+      <input
+        type="username"
+        placeholder="Username"
+        formControlName="username"
+        class="form-control"
+      />
+      <div
+        *ngIf="isSubmitted && formControls.username.errors"
+        class="help-block"
+      >
+        <small *ngIf="formControls.username.errors.required" class="text-danger"
+          >Username is required</small
+        >
+      </div>
+    </div>
+
+    <div
+      [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }"
+    >
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        class="form-control"
+      />
+      <div
+        *ngIf="isSubmitted && formControls.password.errors"
+        class="has-error"
+      >
+        <small *ngIf="formControls.password.errors.required" class="text-danger"
+          >Password is required</small
+        >
+      </div>
+    </div>
+
+    <p>
+      <input type="submit" value="Sign in" class="btn" />
+    </p>
+  </form>
+</div>

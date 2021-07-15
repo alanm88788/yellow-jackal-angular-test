@@ -1,0 +1,16 @@
+<div class="calendar">
+    <div class="cal-icon-wrapper" (click)="open($event)"><img src="../../../../assets/images/calendar.svg" alt="cal" /></div>
+    <input
+      type="text"
+      ngxDaterangepickerMd
+      [(ngModel)]="selected"
+      class="form-control"
+      placeholder="Choose date"
+      [showDropdowns]="true"
+      [lockStartDate]="false"
+      [customRangeDirection]="false"
+      (ngModelChange)="ngModelChange($event)"
+      (change)="change($event)"
+      [showCancel]="true"
+    />
+</div>

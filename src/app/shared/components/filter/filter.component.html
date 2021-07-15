@@ -1,0 +1,27 @@
+<div ngbDropdown class="d-inline-block">
+  <button class="toggle-dropdown" id="dropdownForm1" ngbDropdownToggle>
+    Status: <strong>{{selected}}</strong>
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+    <form class="px-4 py-3">
+      <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					Pending
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					Resolved
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					Reopened
+				</label>
+			</div>
+    </form>
+  </div>
+</div>

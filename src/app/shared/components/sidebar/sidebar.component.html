@@ -1,0 +1,30 @@
+<div class="sidebar container" *ngIf="showSidebar">
+  <div class="row">
+    <img src="../../../../assets/images/logo_gray.svg" class="cursor-pointer" alt="no logo" (click)="navigateTo('home')" />
+  </div>
+  <div class="row mt-4">
+    <div class="accordion accordion-flush">
+      <ngb-accordion (panelChange)="beforeChange($event)" [closeOthers]="true" #acc>
+        <ngb-panel
+          id="summary"
+          title="SUMMARY"
+          [cardClass]="acc.activeIds.includes('summary') ? 'active' : ''"
+          (click)="navigateTo('summary')"
+        >
+        </ngb-panel>
+        <ngb-panel
+          id="tickets"
+          title="TICKETS"
+          [cardClass]="acc.activeIds.includes('tickets') ? 'active' : ''"
+        >
+          <ng-template ngbPanelContent>
+            <ul>
+              <li (click)="navigateTo('reports')">Report</li>
+              <li (click)="navigateTo('details')">Details</li>
+            </ul>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+</div>
